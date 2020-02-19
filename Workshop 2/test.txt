@@ -1,0 +1,4 @@
+I wrote This!
+This is a random  text file that is being used for an assignment.
+Hopefully it works.From another file another text, whaddup
+I wrote This!

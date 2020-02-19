@@ -12,7 +12,7 @@ http.createServer(function (request, response) {
                     <th>Genre</th>
                   </tr>
                   <tr>
-                    <td><a href="https://google.com">Wasteland</a></td>
+                    <td><a href="https://google.com">Second Life Syndrome</a></td>
                     <td>Riverside</td>
                     <td>Prog Rock</td>
                   </tr>

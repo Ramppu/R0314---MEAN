@@ -5,8 +5,7 @@ const app = express();
 //module for handling form data
 const bp = require('body-parser');
 app.use(bp.urlencoded({ extended: true }));
-const data = require('./json/messages.json');
-const path = require('./json/messages.json');
+
 
 //Routes
 app.get('/frontpage',function(req, res) {
@@ -21,14 +20,16 @@ app.get('/message',function(req, res) {
   res.sendFile(__dirname + '/html/addMessage.html');
 });
 app.post('/message',function (req, res) {
-  var data = {
+  var data = require('./json/messages.json');
+  var dataa = {
     "Name": req.body.name,
     "Country": req.body.country,
     "Message": req.body.message,
     "Date": new Date()
   };
+  data.push(dataa);
   var write = JSON.stringify(data, null, 2);
-    fs.appendFile('./json/messages.json',write,finished);
+    fs.writeFile('./json/messages.json',write,finished);
     function finished(err) {
       console.log("All done!");
       res.redirect('/frontpage');

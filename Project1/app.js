@@ -1,11 +1,14 @@
 const express = require('express');
 const fs = require('fs');
+const path = ('require');
 const app = express();
 
 //module for handling form data
 const bp = require('body-parser');
 app.use(bp.urlencoded({ extended: true }));
 
+//Css
+app.use(express.static(__dirname + '/html'));
 
 //Routes
 app.get('/frontpage',function(req, res) {

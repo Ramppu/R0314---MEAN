@@ -1,0 +1,45 @@
+body {
+  background: #ff00cc;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+h1 {
+  font-size: 8rem !important;
+  font-family: 'Lacquer';
+  text-align: center;
+}
+form {
+  text-align: center;
+  margin-top: 20%;
+}
+
+/* Style inputs */
+ input[type=text], select {
+ width: 50%;
+ border-radius: 25px;
+ padding: 12px 20px;
+ margin-top: 3%;
+ box-sizing: border-box;
+ text-align: center;
+ background: #de6161;  /* fallback for old browsers */
+ background: -webkit-linear-gradient(to right, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+ background: linear-gradient(to right, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+}
+
+/* Style the submit button */
+input[type=submit] {
+  width: 50%;
+  border-radius: 25px;
+  background: #de6161;  /* fallback for old browsers */
+  background: -webkit-linear-gradient(to right, #2657eb, #de6161);  /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(to right, #2657eb, #de6161); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  padding: 14px 20px;
+  margin-top: 3%;
+  cursor: pointer;
+}
+
+.row {
+  display: block !important;
+}

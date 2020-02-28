@@ -17,6 +17,9 @@ app.get('/frontpage',function(req, res) {
 
 app.get('/list',function(req, res) {
   res.sendFile(__dirname + '/html/guestbook.html');
+  let rawdata = fs.readFileSync('./json/messages.json');
+  let messages = JSON.parse(rawdata);
+  res.write(messages);
 });
 
 app.get('/message',function(req, res) {

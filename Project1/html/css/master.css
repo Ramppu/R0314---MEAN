@@ -1,7 +1,5 @@
 body {
-  background: #ff00cc;  /* fallback for old browsers */
-  background: -webkit-linear-gradient(to right, #333399, #ff00cc);  /* Chrome 10-25, Safari 5.1-6 */
-  background: linear-gradient(to right, #333399, #ff00cc); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+   color: black;
 }
 
 h1 {
@@ -11,7 +9,7 @@ h1 {
 }
 form {
   text-align: center;
-  margin-top: 20%;
+  margin-top: 5%;
 }
 
 /* Style inputs */
@@ -42,4 +40,9 @@ input[type=submit] {
 
 .row {
   display: block !important;
+}
+
+table, th, td {
+  text-align: center;
+  border: 1px solid black;
 }

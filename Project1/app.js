@@ -42,6 +42,14 @@ app.post('/message',function (req, res) {
     }
 });
 
+app.get('/messageAjax',function(req, res) {
+  res.sendFile(__dirname + '/html/addMessageAjax.html');
+});
+
+app.get('/api',function(req, res) {
+  res.sendFile(__dirname + '/json/messages.json');
+});
+
 //If route is not given, default to the frontpage
 app.get('*',function (req, res) {
        res.redirect('/frontpage');

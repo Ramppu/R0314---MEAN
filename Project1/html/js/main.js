@@ -57,7 +57,7 @@ function sendData() {
   $.ajax({
     type: 'POST',
     url: '/api',
-    data: object,
+    data: JSON.stringify(object),
     success: function(data) {
       ajaxCall();
       console.log(data);

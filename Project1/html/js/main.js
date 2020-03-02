@@ -54,10 +54,13 @@ function sendData() {
     Date: new Date()
   };
 
-  var xhttp = new XMLHttpRequest();
-  xhttp.open("POST", "api", true);
-  xhttp.send();
-  xhttp.onreadystatechange = function() {
-    ajaxCall();
-  }
+  $.ajax({
+    type: 'POST',
+    url: '/api',
+    data: object,
+    success: function(data) {
+      ajaxCall();
+      console.log(data);
+    }
+  });
 }

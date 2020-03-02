@@ -7,7 +7,7 @@ const app = express();
 const bp = require('body-parser');
 app.use(bp.urlencoded({ extended: true }));
 
-//Css
+//Css & json?
 app.use(express.static(__dirname + '/html'));
 
 //Routes
@@ -51,7 +51,7 @@ app.get('/api',function(req, res) {
 });
 
 app.post('/api',function(req, res) {
-  //res.sendFile(__dirname + '/json/messages.json');
+  sendData();
 });
 
 //If route is not given, default to the frontpage

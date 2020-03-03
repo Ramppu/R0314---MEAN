@@ -54,8 +54,19 @@ app.get('/api',function(req, res) {
 });
 
 app.post('/api',function(req, res) {
-  var name = req.body.name;
-     console.log(name);
+  var data = require('./json/messages.json');
+  var dataa = {
+    "Name": req.body.Name,
+    "Country": req.body.Country,
+    "Message": req.body.Message,
+    "Date": new Date()
+  };
+  data.push(dataa);
+  var write = JSON.stringify(data, null, 2);
+    fs.writeFile('./json/messages.json',write,finished);
+    function finished(err) {
+      console.log("All done!");
+    }
 });
 
 //If route is not given, default to the frontpage

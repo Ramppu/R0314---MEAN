@@ -53,14 +53,11 @@ function sendData() {
     Message: $message.val(),
     Date: new Date()
   };
+  var jsonObject = JSON.stringify(object);
 
-  $.ajax({
-    type: 'POST',
-    url: '/api',
-    data: JSON.stringify(object),
-    success: function(data) {
-      ajaxCall();
-      console.log(data);
-    }
-  });
+  const xhr = new XMLHttpRequest();
+  xhr.open("POST","api");
+  xhr.setRequestHeader("Content-type","application/json");
+  xhr.send(jsonObject);
+  ajaxCall();
 }

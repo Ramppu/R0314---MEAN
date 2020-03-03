@@ -4,10 +4,13 @@ const path = ('require');
 const app = express();
 
 //module for handling form data
-const bp = require('body-parser');
-app.use(bp.urlencoded({ extended: true }));
+var bp = require('body-parser')
+app.use( bp.json() );       // to support JSON-encoded bodies
+app.use(bp.urlencoded({     // to support URL-encoded bodies
+  extended: true
+}));
 
-//Css
+//Css & json?
 app.use(express.static(__dirname + '/html'));
 
 //Routes
@@ -48,6 +51,11 @@ app.get('/messageAjax',function(req, res) {
 
 app.get('/api',function(req, res) {
   res.sendFile(__dirname + '/json/messages.json');
+});
+
+app.post('/api',function(req, res) {
+  var name = req.body.name;
+     console.log(name);
 });
 
 //If route is not given, default to the frontpage

@@ -55,11 +55,12 @@ function sendData() {
   };
 
   $.ajax({
-    type: "POST",
-    url: "api",
-    data: object,
-    success: function() {
+    type: 'POST',
+    url: '/api',
+    data: JSON.stringify(object),
+    success: function(data) {
       ajaxCall();
+      console.log(data);
     }
   });
 }

@@ -25,7 +25,6 @@ function ajaxCall() {
          }
          table.appendChild(th);
      }
-
        for(var i = 0; i < data.length; i++) {
          var table = document.getElementById("tbl");
          var row = table.insertRow(i);
@@ -44,8 +43,8 @@ function ajaxCall() {
 
 function sendData() {
   var $name = $('#name');
-  var $country = $('#message');
-  var $message = $('#country');
+  var $country = $('#country');
+  var $message = $('#message');
 
   var object = {
     Name: $name.val(),
